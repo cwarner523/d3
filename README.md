@@ -7,4 +7,6 @@ D3 (D3.js) is a JavaScript library that takes data, and visualizes the informati
 
 
 ### Some Examples
-* 
+* https://bl.ocks.org/mbostock/4062045
+* https://bl.ocks.org/mbostock/43aebffeacf96d8d881f
+* https://bl.ocks.org/mbostock/34f08d5e11952a80609169b7917d4172

@@ -5,10 +5,16 @@ D3 (D3.js) is a JavaScript library that takes data, and visualizes the informati
 
 ### Similarities/Differences to other technologies
 
-### Introduction to D3
+## Introduction to D3
+D3 or Data-Driven Documents is a powerful Javascript library to create dynamic data visualization using Shapes, Line and Text. You must have a good understanding of HTML, CSS and Javascript to use D3. You must know how to access the console and the DOM tree in your browser.
 
-D3 or `Data-Driven-Documents` makes graphic representation of a data and make animation from it. You can create shapes, lines and text to create charts, histograms and other cool stuffs. This makes d3 so awesome, you have the power to combine all this things create simple to complex data charts.
+You will learned how HTML5, SVG and Javascript work together to create wonderful visual and animations.
 
-You need to have atleast a basic knowledge of HTML, CSS and javacript. You need to know how to check the console and see all the elements from the DOM tree.
-
-> At the end of this chapter you will learn the basic of D3 and on how you can use it in your projects 
+### Basic Shapes Key Attributes 
+- rect - means "rectangle" 
+- circle
+- ellipse
+- line
+- text
+- path 
+- `polygon` and `polyline` is also part of the shape attributes but they are not mostly used because it's much easier to use path.

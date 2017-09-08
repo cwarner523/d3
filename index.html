@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<canvas width="1180" height="500"></canvas>
+<!-- <script src="https://unpkg.com/d3-timer"></script> -->
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+<script>
+
+var words = "carly and mark love d3 carly and mark love d3 carly and mark love d3 carly and mark love d3 carly and mark love d3 carly and mark love d3 carly and mark love d3 carly and mark love d3 carly and mark love d3 carly and mark love d3 ".split(/\s+/g);
+
+var canvas = document.querySelector("canvas"),
+    canvas2 = canvas.cloneNode(),
+    context = canvas.getContext("2d"),
+    context2 = canvas2.getContext("2d");
+    width = canvas.width,
+    height = canvas.height;
+
+// font size and family
+context.font = context2.font = "325px Futura";
+//text alignment
+context.textAlign = context2.textAlign = "center";
+// font color
+context.fillStyle = context2.fillStyle = "#394AFF";
+// line format
+context.lineJoin = context2.lineJoin = "round";
+
+var gradient = context2.createLinearGradient(0, 0, 1100, 0)
+gradient.addColorStop("0", "#28964D")
+gradient.addColorStop("0.15", "#34CDFF")
+gradient.addColorStop("0.5", "#394AFF");
+gradient.addColorStop("0.85", "#34CDFF")
+gradient.addColorStop("1.0", "#28964D");
+
+
+(function next() {
+  var i = 0.5, text = words.shift();
+  context.clearRect(0, 0, width, height);
+  //placement of word
+  context.fillText(text, width / 2, height / 2 + 100);
+  var timer = d3.timer(function() {
+    if (++i > text.length * 30) return timer.stop(), next();
+    context2.save();
+    context2.clearRect(0, 0, width, height);
+    context2.lineWidth = i & 9 ? i * 5 + 3 : i * 5;
+    context2.strokeStyle = i & 1.9 ? "white" : gradient ;
+    context2.strokeText(text, width / 2, height / 2 + 100);
+    context2.restore();
+    context2.drawImage(canvas, 0, 0);
+    context.drawImage(canvas2, 0, 0);
+  });
+})();
+
+</script>

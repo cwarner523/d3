@@ -68,6 +68,7 @@ svg.selectAll("rect")
 ```
 
 ### Manipulating a previous Canvas D3 Animation
+Link to example: http://landlord-carol-10680.bitballoon.com/
 1. Styling the words displaying on the screen by font, text-alignment, color, and the shape of the outlines
 ``` js
 // font size and family
